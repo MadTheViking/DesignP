@@ -1,5 +1,6 @@
 html{
-    background-color: yellow;
+    background-color: white;
+    max-width: 1440px;
 }
 .info {
     background-color: #f1f1f1;
@@ -8,15 +9,17 @@ html{
     font-size: 30px;
   }
 .smartphone {
-    position: relative;
-    width: 370px;
-    height: 610px;
-    margin: auto;
-    border: 16px blue solid;
-    border-top-width: 20px;
-    border-bottom-width: 40px;
-    border-radius: 36px;
-    z-index: 1;
+  box-shadow: 0px 1px 20px 4px #d6d6d6;
+  position: relative;
+  width: 370px;
+  height: 610px;
+  margin: auto;
+  border: 16px white solid;
+  border-top-width: 20px;
+  border-bottom-width: 40px;
+  border-radius: 36px;
+  z-index: 1;
+  margin-left: 50px;
   }
 .smartphone:before {
     content: '';
@@ -27,7 +30,7 @@ html{
     top: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: blue;
+    background: white;
     border-radius: 10px;
     z-index: 3;
   }
@@ -40,23 +43,23 @@ html{
     left: 50%;
     bottom: -44px;
     transform: translate(-50%, -50%);
-    background: rgb(190, 189, 189);
+    background: rgb(206, 205, 205);
     border-radius: 9999px;
     color: rgb(163, 163, 163);
     z-index: 4;
   }
 .chat {
-    position: relative;
-    border-radius: 23px;
-    width: 320px;
-    height: 637px;
-    background: white;
-    z-index: 2;
+  position: relative;
+  border-radius: 11px;
+  width: 320px;
+  height: 637px;
+  background: hsl(270, 20%, 96%);
+  z-index: 2;
   }
-.txt{
-    position: absolute;
-    top: 600px;
-    left: 40px;
+.Txt{
+    position: relative;
+    top: 30px;
+    left: -7px;
     padding: 10px;
     z-index: 5;
 }
@@ -66,94 +69,44 @@ html{
     z-index: 5;
 }
 body {
-    font-family: helvetica;
+    font-family: 'Rubik';
     display: flex ;
     flex-direction: column;
     align-items: center;
   } 
-.messages {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-.message {
-    border-radius: 20px;
-    padding: 8px 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: inline-block;
-  }
-  
-.yours {
-    align-items: flex-start;
-  }
-  
-.yours .message {
-    margin-right: 25%;
-    background-color: #eee;
-    position: relative;
-  }
-  
-.yours .message.last:before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-    left: -7px;
-    height: 20px;
-    width: 20px;
-    background: #eee;
-    border-bottom-right-radius: 15px;
-  }
-.yours .message.last:after {
-    content: "";
-    position: absolute;
-    z-index: 4;
-    bottom: 0;
-    left: -10px;
-    width: 10px;
-    height: 20px;
-    background: white;
-    border-bottom-right-radius: 10px;
-  }
-  
 .mine {
-    align-items: flex-end;
-  }
+padding-left: 10px;
+padding-right: 10px;
+}
+.yours{
+padding-left: 10px;
+padding-right: 10px;
+font-weight: 300;
+}
+.messages{
+  font-size: 13px;
+  margin-top: 30px;
+  color: white;
+  border-radius: 8px;
+  margin: auto;
+  font-weight: 300;
+}
+.messagea{
+  font-size: 13px;
+  margin-top: 30px;
+  background-color: hsl(270deg 8% 80%);
+  color: hsl(276, 55%, 52%);
+  border-radius: 8px;
+  margin-left: 3px;
   
-.mine .message {
-    color: white;
-    margin-left: 25%;
-    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
-    background-attachment: fixed;
-    position: relative;
-  }
-  
-.mine .message.last:before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-    right: -8px;
-    height: 20px;
-    width: 20px;
-    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
-    background-attachment: fixed;
-    border-bottom-left-radius: 15px;
-  }
-  
-.mine .message.last:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    right: -10px;
-    width: 10px;
-    height: 20px;
-    background: white;
-    border-bottom-left-radius: 10px;
-  }
+}
+.message{
+  font-size: 13px;
+  margin-top: 8px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 4px -4px rgba(119, 119, 119, 0.7);
+}
 .info {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
@@ -163,14 +116,19 @@ body {
 }
   
 footer  {
-position: fixed;
-bottom: 100px;
+position: relative;
+bottom: 1000px;
  font-size: 11px; text-align: center; 
   color: hsl(228, 45%, 44%)
 }
 .container {
  display: flex;
+ flex-wrap: column wrap;
  flex-direction: row;
+ max-width: 1000px;
+ padding-left: 400px;
+ width: 100%;
+ max-width: 800px;
 }
 .Typea {
     position: absolute;
@@ -178,4 +136,101 @@ bottom: 100px;
     left: 15px;
     padding: 10px;
     z-index: 5;
+
+}
+.dog {
+  width: 65px;
+  z-index: 4;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 20px;
+}
+.man {
+  width: 45px;
+  z-index: 4;
+  position: absolute;
+  border-radius: 100px;
+  border: 3px solid white;
+  bottom: 490px;
+  right: 240px;
+}
+.Heading {
+  height: 50px;
+  width: 170px;
+  padding-left: 90px;
+  color: white;
+}
+.box{
+  content: '';
+  display: block;
+  width: 319px;
+  height: 94px;
+  position: absolute;
+  top: 45px;
+  left: 159px;
+  transform: translate(-50%, -50%);
+  background:linear-gradient(to left,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+  z-index: 2;
+  border-radius: 12px;
+}
+.money{
+  font-size: 18px;
+  right: 50px;
+  margin: auto;
+  font-weight: 700;
+}
+.MoneyC{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(to left,hsl(293, 100%, 63%),hsl(264, 100%, 61%));;
+  border-radius: 90px;
+  max-width: 200PX;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+} 
+.Mcontainer {
+  width: 220px;
+  font-size: 13px;
+}
+.Fcontainer{
+  margin-top: 10px;
+  right: 100px;
+  border-radius: 20px;
+  margin-left: 88px;
+  width: 225px;
+}
+.Walk {
+  color: hsl(276, 100%, 81%);
+}
+.makeit{
+  margin-left: 85px;
+}
+/* =============================================*/
+.content {
+ height: 200px;
+ width: 900px
+}
+.Main{
+  position: relative;
+  margin: auto 100px auto 100px;
+  background-color: white;
+  text-align: center;
+  
+}
+.MainHeading{
+  color: rgb(78, 2, 78);
+  padding: 0px 50px 0px 50px;
+  max-width: 300px;
+  width: 100%;
+  font-weight: 700;
+}
+.Subheading{
+  color: rgb(119, 119, 119);
+  text-align: center;
+  padding: 0px 50px 0px 50px;
+  max-width: 600px;
+  width: 100%;
+  word-spacing: 1px;
 }
